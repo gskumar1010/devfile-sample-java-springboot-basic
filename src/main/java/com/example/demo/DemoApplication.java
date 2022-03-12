@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.lang.*;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +14,8 @@ public class DemoApplication {
 
     @RequestMapping("/")
     String home() {
-        String podname=System.getenv("HOSTNAME");
-        System.out.println(podname);  
-        return "Hello World!";
+        String podname = System.getenv("HOSTNAME");
+        return podname;
     }
 
     public static void main(String[] args) {
