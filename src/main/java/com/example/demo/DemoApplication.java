@@ -12,6 +12,8 @@ public class DemoApplication {
 
     @RequestMapping("/")
     String home() {
+        String podname=System.getenv("HOSTNAME");
+        System.out.println(podname);  
         return "Hello World!";
     }
 
